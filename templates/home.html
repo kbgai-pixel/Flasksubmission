@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<section class="card hero">
+    <h1>Welcome to the Flask Project</h1>
+    <p>This project collects user information through a form and displays the saved entries.</p>
+    <div class="actions">
+        <a class="button primary" href="{{ url_for('form') }}">Go to form</a>
+        <a class="button secondary" href="{{ url_for('users') }}">View users</a>
+    </div>
+</section>
+{% endblock %}

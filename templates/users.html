@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% block title %}Users{% endblock %}
+
+{% block content %}
+<section class="card">
+    <h1>Registered Users</h1>
+
+    {% if users %}
+    <table class="user-table">
+        <thead>
+            <tr>
+                <th>Full Name</th>
+                <th>Email</th>
+                <th>Age</th>
+                <th>City</th>
+                <th>Country</th>
+                <th>Occupation</th>
+                <th>Hobby</th>
+                <th>Language</th>
+                <th>Hours</th>
+                <th>Entertainment</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for user in users %}
+            <tr>
+                <td>{{ user.full_name }}</td>
+                <td>{{ user.email }}</td>
+                <td>{{ user.age }}</td>
+                <td>{{ user.city }}</td>
+                <td>{{ user.country }}</td>
+                <td>{{ user.occupation }}</td>
+                <td>{{ user.hobby }}</td>
+                <td>{{ user.programming_language }}</td>
+                <td>{{ user.online_hours }}</td>
+                <td>{{ user.entertainment }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% else %}
+    <p>No users saved yet.</p>
+    {% endif %}
+</section>
+{% endblock %}
