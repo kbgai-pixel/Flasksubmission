@@ -111,3 +111,6 @@ export FLASK_DEBUG=1
 ## License
 
 This project is provided as a learning/demo application and is intended for educational use.
+
+Author 
+Khadijah Haliru
